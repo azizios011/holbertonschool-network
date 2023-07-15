@@ -2,12 +2,9 @@
 
 # Check if an argument is passed
 if [ $# -eq 0 ]; then
-  echo "Usage: $0 {IP_ADDRESS}"
-  exit 1
+    echo "Usage: $0 {IP_ADDRESS}" 
+# Display usage message if no argument provided
+    exit 1
 fi
 
-# Extract the IP address from the argument
-ip_address=$1
-
-# Ping the IP address 5 times
-ping -c 5 "$ip_address"
+ping -c 5 "$1"  # Ping the specified IP address 5 times
