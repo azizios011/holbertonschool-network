@@ -1,10 +1,18 @@
 #!/usr/bin/env bash
 
 # Check if an argument is passed
-if [ $# -eq 0 ]; then
-    echo "Usage: $0 {IP_ADDRESS}" 
-# Display usage message if no argument provided
+
+
+if [-z "$1"]; then
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
     exit 1
+
+    # Display usage message if no argument provided
+
 fi
 
-ping -c 5 "$1"  # Ping the specified IP address 5 times
+ip_address = $1
+
+# Ping the specified IP address 5 times
+
+ping - c 5 "$ip_address"
